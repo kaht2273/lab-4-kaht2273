@@ -8,7 +8,8 @@ import java.nio.charset.StandardCharsets;
 /**
  * A few utility methods to help make writing tests a bit simpler
  */
-public class TestHelper {
+public class TestHelper
+{
 
     /**
      * These constants encode text color in terminals.
@@ -38,7 +39,8 @@ public class TestHelper {
      * Sets System.in to an InputStream based on the given input string
      * @param inputs The sequence of inputs that will be provided to the scanner (instead of the usual input from the keyboard)
      */
-    public static void setSystemIn(String inputs) {
+    public static void setSystemIn(String inputs)
+    {
         System.setIn(new ByteArrayInputStream(inputs.getBytes(StandardCharsets.UTF_8)));
     }
 
@@ -57,7 +59,8 @@ public class TestHelper {
      *
      *  // Check that the output is as expected
      */
-    public static void redirectSystemOut() {
+    public static void redirectSystemOut()
+    {
         outStream = new ByteArrayOutputStream();
         testOut = new PrintStream(outStream,true, StandardCharsets.UTF_8);
         System.setOut(testOut);
@@ -66,14 +69,16 @@ public class TestHelper {
     /**
      * Resets System.out to the default PrintStream
      */
-    public static void resetSystemOut() {
+    public static void resetSystemOut()
+    {
         System.setOut(stdOut);
     }
 
     /**
      * @return The output produced by the program being tested (provided that setSystemOut has been called first)
      */
-    public static String getOutput() {
+    public static String getOutput()
+    {
         return outStream.toString(StandardCharsets.UTF_8);
     }
 
@@ -81,7 +86,8 @@ public class TestHelper {
      * Print a 'pass' message
      * @param message  The message to print
      */
-    public static void passMessage(String message) {
+    public static void passMessage(String message)
+    {
         var oldOut = testOut;
         System.setOut(stdOut);
         System.out.printf("%sPASS: %s%s%n", TEXT_GREEN, message, TEXT_RESET);
@@ -92,7 +98,8 @@ public class TestHelper {
      * Print a 'fail' message
      * @param message The message to print
      */
-    public static void failMessage(String message) {
+    public static void failMessage(String message)
+    {
         var oldOut = testOut;
         System.setOut(stdOut);
         System.out.printf("%sFAIL: %s%s%n", TEXT_RED, message, TEXT_RESET);

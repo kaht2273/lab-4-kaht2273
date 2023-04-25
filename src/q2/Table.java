@@ -15,14 +15,16 @@ public class Table {
      *                in the table, the remaining spaces will have the value 0; if there are more numbers than spaces
      *                available in the table, the extra numbers are not included in the table.
      */
-    public Table(int rows, int cols, int[] numbers) {
+    public Table(int rows, int cols, int[] numbers)
+    {
 
     }
 
     /**
      * @return The number of rows in the table
      */
-    public int getRows() {
+    public int getRows()
+    {
         // TODO: implement this method
         return 0;
     }
@@ -30,7 +32,8 @@ public class Table {
     /**
      * @return The number of columns in the table
      */
-    public int getCols() {
+    public int getCols()
+    {
         // TODO: implement this method
         return 0;
     }
@@ -38,7 +41,8 @@ public class Table {
     /**
      * @return A reference to the 2d array that represents the data in this table
      */
-    public int[][] getData() {
+    public int[][] getData()
+    {
         // TODO: implement this method
         return null;
     }
@@ -75,22 +79,29 @@ public class Table {
      * @return True if this table has the same number of rows and columns,
      *              and contains the same values as the given 2D array
      */
-    public boolean equals(int[][] other) {
+    public boolean equals(int[][] other)
+    {
         // Prevent the out-of-bounds exception that can happen in the second conditional below
         // if the 2D array has no rows.
-        if ( other.length == 0 && getRows() == 0 ) {
+        if ( other.length == 0 && getRows() == 0 )
+        {
             return true;
-        } else if ( other.length == 0 ) {
+        } else if ( other.length == 0 )
+        {
             return false;
         }
 
-        if ( other.length != getRows() || other[0].length != getCols() ) {
+        if ( other.length != getRows() || other[0].length != getCols() )
+        {
             return false;
         }
 
-        for ( int row = 0 ; row < getRows() ; row++ ) {
-            for ( int col = 0 ; col < getCols() ; col++ ) {
-                if ( other[row][col] != getData()[row][col]) {
+        for ( int row = 0 ; row < getRows() ; row++ )
+        {
+            for ( int col = 0 ; col < getCols() ; col++ )
+            {
+                if ( other[row][col] != getData()[row][col])
+                {
                     return false;
                 }
             }
