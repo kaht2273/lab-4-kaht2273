@@ -2,7 +2,8 @@ package q1;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class App {
+public class App
+{
 
     // TODO: Complete the application as described in the lab instructions
     public static void main(String[] args)
@@ -18,12 +19,13 @@ public class App {
         while (!isValidInput)
         {
             try {
-                System.out.print("Enter two numbers, with a space in between them: ");
+                System.out.print("Enter your first number: ");
                 numOne = scanner.nextDouble();
-                System.out.print("Enter the second double: ");
+                System.out.print("Enter the second number: ");
                 numTwo = scanner.nextDouble();
                 isValidInput = true;
-            } catch (InputMismatchException e)
+            }
+            catch (InputMismatchException e)
             {
                 System.out.println("Invalid input, please enter numbers only.");
                 scanner.nextLine();
@@ -42,6 +44,13 @@ public class App {
         System.out.println("Product:          " + (numOne * numTwo));
         System.out.println("Average:          " + ((numOne + numTwo) / 2));
         System.out.println("Distance:         " + (numOne + numTwo));
+
+        //Shortcut
+        double min= Math.min(numOne,numTwo);
+        double max= Math.max(numOne,numTwo);
+
+        //Long way to fin max and min
+        /*
         if (numOne > numTwo)
         {
             System.out.println("Min:          " + numTwo);
@@ -59,6 +68,8 @@ public class App {
         else
             System.out.println("Min:          " + numOne);
 
-
+        */
         }
+
+
     }
