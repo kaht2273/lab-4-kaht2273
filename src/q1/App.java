@@ -18,7 +18,8 @@ public class App
 
         while (!isValidInput)
         {
-            try {
+            try
+            {
                 System.out.print("Enter your first number: ");
                 numOne = scanner.nextDouble();
                 System.out.print("Enter the second number: ");
@@ -45,7 +46,7 @@ public class App
         System.out.println("Average:          " + ((numOne + numTwo) / 2));
         System.out.println("Distance:         " + (numOne + numTwo));
 
-        //Shortcut
+        //Shortcut to Min & Max
         double min= Math.min(numOne,numTwo);
         double max= Math.max(numOne,numTwo);
 

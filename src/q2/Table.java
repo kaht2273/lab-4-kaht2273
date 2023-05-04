@@ -2,9 +2,13 @@ package q2;
 
 import java.util.ArrayList;
 
-public class Table {
+public class Table
+{
 
     // TODO: Add instance variables here
+    private int[][] data;
+    private int cols;
+    private int rows;
 
     /**
      * Create a table with the given number of rows and columns, and fill it with the given numbers
@@ -17,7 +21,17 @@ public class Table {
      */
     public Table(int rows, int cols, int[] numbers)
     {
+      this.rows=rows;
+      this.cols=cols;
+      data=new int[rows][cols];
 
+      for(int row=0;row<data.length;row++)
+      {
+          for (int col = 0; col < data[row].length; col++)
+          {
+              data[row][col] = row + col;
+          }
+      }
     }
 
     /**
@@ -26,7 +40,7 @@ public class Table {
     public int getRows()
     {
         // TODO: implement this method
-        return 0;
+        return rows;
     }
 
     /**
@@ -35,7 +49,7 @@ public class Table {
     public int getCols()
     {
         // TODO: implement this method
-        return 0;
+        return cols;
     }
 
     /**
@@ -44,7 +58,7 @@ public class Table {
     public int[][] getData()
     {
         // TODO: implement this method
-        return null;
+        return data;
     }
 
     /**

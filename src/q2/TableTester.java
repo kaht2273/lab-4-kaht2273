@@ -2,7 +2,8 @@ package q2;
 
 import test.TestHelper;
 
-public class TableTester {
+public class TableTester
+{
 
     public static void main(String[] args)
     {
@@ -117,7 +118,8 @@ public class TableTester {
         if ( t1.equals(arr) )
         {
             TestHelper.failMessage("equals(int[][]) reports equality with a 2d array when it should NOT");
-        } else
+        }
+        else
         {
             TestHelper.passMessage("equals(int[][]) detects inequality");
         }
