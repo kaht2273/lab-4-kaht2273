@@ -1,0 +1,5 @@
+Place your solution to Programming Project 1.6 here.
+Set ground colour to Ground
+Robot move forward if the next square= Ground
+else turn 90 degrees until ground in front  = Ground
+Repeat until it can not run through twice
